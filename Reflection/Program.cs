@@ -7,5 +7,6 @@ getStarted.TypesAndPropertiesOfAssembly();
 
 GetStarted.AccessToPrivates();
 GetStarted.CastInstanceAndInvokeMethod();
+GetStarted.ExternalAssembly(@"C:\...\...\fileName.exe");
 
 Console.ReadKey();

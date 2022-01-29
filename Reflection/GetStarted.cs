@@ -76,4 +76,16 @@ public class GetStarted
         Console.WriteLine("------------------------------------");
         Console.WriteLine();
     }
+
+
+    public static void ExternalAssembly(string path)
+    {
+        Console.WriteLine("EXTERNAL ASSEMBLY:");
+
+        var assembly = Assembly.LoadFrom(path);
+        Console.WriteLine(assembly);
+
+        Console.WriteLine("------------------------------------");
+        Console.WriteLine();
+    }
 }
