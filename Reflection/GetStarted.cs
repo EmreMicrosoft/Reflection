@@ -3,7 +3,7 @@
 
 namespace Reflection;
 
-public class Fundementals
+public class GetStarted
 {
     public static void AssemblyInfo()
     {
@@ -25,11 +25,11 @@ public class Fundementals
 
         foreach (var type in types)
         {
-            Console.WriteLine("+ Type Name : " + type.Name);
+            Console.WriteLine($"+ Type Name : { type.Name} ");
 
             foreach (var property in type.GetProperties())
             {
-                Console.WriteLine("  - Property Name : " + property.Name);
+                Console.WriteLine($"  - Property : { property.Name } / { property.PropertyType }");
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿using Reflection;
 
 
-Fundementals.AssemblyInfo();
-Fundementals.TypesAndPropertiesOfAssembly();
+GetStarted.AssemblyInfo();
+GetStarted.TypesAndPropertiesOfAssembly();
 
 Console.ReadKey();
