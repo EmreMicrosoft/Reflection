@@ -1,7 +1,11 @@
 ﻿using Reflection;
 
+var getStarted = new GetStarted();
 
-GetStarted.AssemblyInfo();
-GetStarted.TypesAndPropertiesOfAssembly();
+getStarted.AssemblyInfo();
+getStarted.TypesAndPropertiesOfAssembly();
+
+GetStarted.AccessToPrivates();
+GetStarted.CastInstanceAndInvokeMethod();
 
 Console.ReadKey();
