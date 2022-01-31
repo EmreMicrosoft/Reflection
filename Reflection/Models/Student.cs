@@ -10,4 +10,9 @@ public class Student
     {
         Console.WriteLine(message);
     }
+
+    public string Community(string communityName)
+    {
+        return $"Student's community is { communityName }";
+    }
 }
