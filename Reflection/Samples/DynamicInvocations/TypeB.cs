@@ -1,10 +1,20 @@
-﻿namespace Reflection.Samples.DynamicInvocations;
+﻿using Reflection.Models;
+
+namespace Reflection.Samples.DynamicInvocations;
 
 public class TypeB
 {
-    public static void MethodA(string message)
+    public static DynamicResult MethodA(DynamicRequest request)
     {
-        Console.WriteLine($"Message from TypeB/MethodA : \"{ message }\"");
+        var result = new DynamicResult();
+
+        for (var i = 0; i < request.Repetition; i++)
+        {
+            
+        }
+
+        Console.WriteLine($"TypeB/MethodA returned : {nameof(result)}");
+        return result;
     }
 
     public static void MethodB(int number)
