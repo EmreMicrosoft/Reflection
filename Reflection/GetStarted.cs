@@ -69,7 +69,7 @@ public class GetStarted
         var objectType = typeof(Student);
         var objectInstance = (Student)Activator.CreateInstance(objectType);
         var method = objectType.GetMethod(nameof(Student.Greetings));
-
+        
         object[] parameters = { "Hello World!" };
         method!.Invoke(objectInstance, parameters);
 

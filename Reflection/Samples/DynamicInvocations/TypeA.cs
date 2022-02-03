@@ -9,9 +9,10 @@ public class TypeA
         return result;
     }
 
-    public static int MethodB(int number1, int number2)
+    public static int MethodB(IEnumerable<int> numbers)
     {
-        var result = number1 + number2;
+        var result = numbers.Sum();
+
         Console.WriteLine($"TypeA/MethodB returned : {result}");
         return result;
     }
