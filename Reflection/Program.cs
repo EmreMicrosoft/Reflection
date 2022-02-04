@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Reflection;
 using Reflection.Models;
+using Reflection.Samples.DynamicInvocations;
 using Reflection.Samples.DynamicReflection;
 
 
@@ -19,14 +20,17 @@ GetStarted.CastInstanceAndInvokeMethod();
 // *****   DYNAMIC REFLECTION DEMO   *****
 var assembly = Assembly.Load(new AssemblyName("Reflection"));
 var objectType = assembly.GetType("Reflection.Models.Student");
-var objectInstance = (Student)Activator.CreateInstance(objectType!);
 
 //var objectInstance = Activator.CreateInstance(typeof(Student));
+var objectInstance = (Student)Activator.CreateInstance(objectType!);
+
 
 dynamic student = new ExtendedObject(objectInstance);
-var result = (string)student.Community("Full Stack Development");
+var staticResult = (string)student.Community("Full Stack Development");
+Console.WriteLine(staticResult);
 
-Console.WriteLine(result);
+var results = DynamicRequest.Run();
+//foreach (var result in results) { TODO }
 
 
 
